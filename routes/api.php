@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ControllerCitas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/**
+ * API QUE TE MUESTRA TODAS LAS CITAS QUE HAY
+ */
+Route::get('/showCitas', [ControllerCitas::class, 'showAll']);
