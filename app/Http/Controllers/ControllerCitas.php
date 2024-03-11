@@ -11,7 +11,7 @@ class ControllerCitas extends Controller
     //OBTENER TODAS LAS CITAS
     public function showAll()
     {
-        $allCitas = ModelCitas::all();
+        $allCitas = ModelCitas::getCitas();
         return response()->json($allCitas);
     }
 }
