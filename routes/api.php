@@ -23,3 +23,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
  * API QUE TE MUESTRA TODAS LAS CITAS QUE HAY
  */
 Route::get('/showCitas', [ControllerCitas::class, 'showAll']);
+
+/**
+ * API PARA AGREGAR UNA NUEVA CITA
+ */
+Route::post('/addCita', [ControllerCitas::class, 'addCita']);

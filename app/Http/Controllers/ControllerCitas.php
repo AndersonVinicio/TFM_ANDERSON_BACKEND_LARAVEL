@@ -14,4 +14,14 @@ class ControllerCitas extends Controller
         $allCitas = ModelCitas::getCitas();
         return response()->json($allCitas);
     }
+
+    public function addCita(Request $request)
+    {
+        $cita = ModelCitas::addCita($request);
+        return response()->json([
+            'success' => true,
+            'message' => 'Cita creada exitosamente',
+            'data' => $cita,
+        ]);
+    }
 }
