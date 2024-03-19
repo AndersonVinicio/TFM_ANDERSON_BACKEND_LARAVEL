@@ -24,4 +24,13 @@ class ControllerCitas extends Controller
             'data' => $cita,
         ]);
     }
+
+    public function deleteCita(int $id)
+    {
+        $respuestaBD = ModelCitas::deleteCita($id);
+        return response()->json([
+            'delete' => true,
+            'message' => $respuestaBD,
+        ]);
+    }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\ControllerCitas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -28,3 +29,8 @@ Route::get('/showCitas', [ControllerCitas::class, 'showAll']);
  * API PARA AGREGAR UNA NUEVA CITA
  */
 Route::post('/addCita', [ControllerCitas::class, 'addCita']);
+
+/**
+ * ENDPOINT QUE ELIMINA CITA POR ID
+ */
+Route::delete('/deleteCita/{id}', [ControllerCitas::class, 'deleteCita']);
